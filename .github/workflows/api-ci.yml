@@ -1,9 +1,10 @@
 name: API CI
 
+#on: [push] # when no subfolder
 on:
   push:
     paths:
-      - "./api/**"
+      - 'api/**'
       - ".github/workflows/api-ci.yml"
 
 defaults:
