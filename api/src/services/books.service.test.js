@@ -1,5 +1,5 @@
-const generateManyBooks = require('../fakes/book.fakes');
-const { BooksService } = require('./books.service');
+const { generateManyBooks } = require('../fakes/book.fakes');
+const BooksService = require('./books.service');
 
 const fakeBooks = [
   {
