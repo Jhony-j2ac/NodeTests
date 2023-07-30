@@ -30,7 +30,7 @@ describe('Test for endpoint', () => {
 
   afterAll(async () => {
     await server.close();
-    //await database.collection('books').deleteMany({});
+    // await database.collection('books').deleteMany({});
     await database.dropDatabase();
   });
 
@@ -47,7 +47,7 @@ describe('Test for endpoint', () => {
           name: 'Book2',
           year: 2000,
           author: 'david',
-        }
+        },
       ]);
       console.log(seedData);
       // Act
