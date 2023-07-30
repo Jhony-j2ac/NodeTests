@@ -1,18 +1,18 @@
 const { generateManyBooks } = require('../fakes/book.fakes');
 const BooksService = require('./books.service');
 
-const fakeBooks = [
+/* const fakeBooks = [
   {
     _id: 1,
     name: 'Harry potter Mob',
   },
-];
+]; */
 
 // MOCKING
-const MongoLibStubMock = {
+/* const MongoLibStubMock = {
   getAll: () => [...fakeBooks],
   create: () => {},
-};
+}; */
 
 // SPIES
 const mockGetAll = jest.fn();
@@ -35,14 +35,14 @@ describe('Test for BooksService', () => {
   describe('test for getBooks', () => {
     test('should return a list of books', async () => {
       // Arrange
-      //mockGetAll.mockResolvedValue(fakeBooks);
+      // mockGetAll.mockResolvedValue(fakeBooks);
 
       const fakeBooksGenerated = generateManyBooks(4);
       mockGetAll.mockResolvedValue(fakeBooksGenerated);
       const books = await service.getBooks({});
 
       // act
-      console.log(books);
+      // console.log(books);
       // expect(service.getBooks({})).resolves.toBeDefined();
       expect(books.length).toBe(4);
 
