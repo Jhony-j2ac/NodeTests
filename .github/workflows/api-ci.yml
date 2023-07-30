@@ -37,7 +37,7 @@ jobs:
     container:
       image: node:14
 
-    service:
+    services:
       image: mongo:4.4
       mongo-e2e:
         ports:
